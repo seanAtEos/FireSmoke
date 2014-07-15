@@ -9,34 +9,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	</head>
 	<body>
-        <div id="sb-site">
-            <div class="header-wrapper">
-                <div class="header">
-                    <nav>
-                        <ul>
-                            <li><a href="#">FireSmoke.ca</a></li>
-                            <li><a href="#">Forecasts</a>
-                                <ul>
-                                    <li><a href="#">Canada</a></li>
-                                    <li><a href="#">East</a></li>
-                                    <li><a href="#">West</a></li>
-                                    <li><a href="#">Development</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Data</a></li>
-                            <li><a href="#">Resources</a></li>
+    <div id="sb-site">
+      <div class="header-wrapper">
+        <div class="header">
+					<p class="sb-toggle-left">Menu</p>
+					<h1 class="logo"><a href="#">FireSmoke.ca</a></h1>
+          <nav>
+            <ul>
+              <!--<li><a href="#">FireSmoke.ca</a></li>-->
+              <li><a href="#">Forecasts</a>
+              <ul>
+								<li><a href="#">Canada</a></li>
+								<li><a href="#">East</a></li>
+								<li><a href="#">West</a></li>
+								<li><a href="#">Development</a></li>
 							</ul>
-                        <p class="sb-toggle-left">Toggle left sidebar</p>
-						</nav>
-                </div>
-            </div>
+							</li>
+							<li><a href="#">Data</a></li>
+							<li><a href="#">Resources</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
             
-            <div class="body-wrapper">
-                <!-- Banner -->
-				<!--<div id="banner-image">-->
-					<img id=#banner-image" src="imgs/banner.jpg" alt="banner">
-				<!--</div>-->
-							
+			<div class="body-wrapper">
+				<div id="banner-image">
+					<img src="imgs/banner.jpg" alt="banner">
+				</div>
+				<!--<p class="sb-toggle-left">Toggle left sidebar</p>-->
 				<div class="block">
 					<h2>Western Canadian Forecast</h2>
 					<p id="p1">Pasta ipsum dolor sit amet cencioni mostaccioli linguine penne lisce mafalde mezzani pasta frakking mostaccioli trenne lasagnotte fettuccine ciriole gramigna penne spaghetti. Elicoidali frak tortiglioni scialatelli maltagliati farfalle stringozzi pennoni foglie d'ulivo pennoni lasagne. Stringozzi cock conchiglie penne radiatori fettuccine lasagne maltagliati tortiglioni. Sacchettoni linguettine ravioli linguettine chifferi acini di pepe ziti. Elicoidali bavette torchio pennoni mostaccioli paccheri tagliatelle ciriole lanterne pennette. Mezzelune mafalde farfalle vermicelli cellentani cavatelli ravioli fusilli bucati calamarata. Fuck pennoni lasagnotte trennette vermicelloni casarecce farfalle fiori. </p>
@@ -49,9 +49,9 @@
 					<h2>Canadian Forecast</h2>
 					<p class="p3">Pasta ipsum dolor sit amet cencioni mostaccioli linguine penne lisce mafalde mezzani pasta frakking mostaccioli trenne lasagnotte fettuccine ciriole gramigna penne spaghetti. Elicoidali frak tortiglioni scialatelli maltagliati farfalle stringozzi pennoni foglie d'ulivo pennoni lasagne. Stringozzi cock conchiglie penne radiatori fettuccine lasagne maltagliati tortiglioni. Sacchettoni linguettine ravioli linguettine chifferi acini di pepe ziti. Elicoidali bavette torchio pennoni mostaccioli paccheri tagliatelle ciriole lanterne pennette. Mezzelune mafalde farfalle vermicelli cellentani cavatelli ravioli fusilli bucati calamarata. Fuck pennoni lasagnotte trennette vermicelloni casarecce farfalle fiori. </p>
 				</div>
-            </div>
+      </div>
             
-            <div class="footer-wrapper">
+      <div class="footer-wrapper">
 				<div id="footer-links">
 					<p>
 						<span id="contact-link"><a href="/">Home</a></span>
@@ -70,36 +70,39 @@
 					&copy; FireSmoke.ca. All rights reserved.</a>
 				</div>
 			</div>
-            
-        </div>
+		</div>
         
-        <div class="sb-slidebar sb-left">
-          <!-- Your left Slidebar content. -->
-          <ul id="sb-nav">
-            <li><a href="#">FireSmoke.ca</a>
-                <ul>
-                    <li><a href="#">Canada</a></li>
-                    <li><a href="#">Eastern Canada</a></li>
-                    <li><a href="#">Western Canada</a></li>
-                    <li><a href="#">Development</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Forecasts</a></li>
-            <li><a href="#">Data</a></li>
-            <li><a href="#">Resources</a></li>
-          </ul>
-        </div>
-        
-        <!-- jQuery -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <!-- Slidebars -->
-        <script src="js/slidebars.min.js"></script>
-        <script>
-          (function($) {
-            $(document).ready(function() {
-              $.slidebars();
-            });
-          }) (jQuery);
-        </script>
+    <div class="sb-slidebar sb-left">
+      <!-- Your left Slidebar content. -->
+      <ul id="sb-menu">
+				<li class="logo"><a href="#">FireSmoke.ca</a>
+        <li id="sb-forecasts"><a href="#">Forecasts</a></li>			        
+            <ul>
+                <li class="sub-li"><a href="#">Canada</a></li>
+                <li class="sub-li"><a href="#">Eastern Canada</a></li>
+                <li class="sub-li"><a href="#">Western Canada</a></li>
+                <li class="sub-li"><a href="#">Development</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Data</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Slidebars -->
+    <script src="js/slidebars.min.js"></script>
+    <script>
+      (function($) {
+        $(document).ready(function() {
+          $.slidebars();
+        });
+      }) (jQuery);
+			
+			$("#sb-forecasts").click(function(){
+				$(".sub-li").toggleClass('displayed');
+			});
+    </script>
 	</body>
 </html>
