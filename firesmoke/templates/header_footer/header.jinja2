@@ -1,0 +1,25 @@
+<div id="header-wrapper">
+	<header class="container" id="site-header">  <!-- id="site-header-home" -->
+		<div class="row">
+			<div class="12u">
+				<div id="logo">
+					<h1 {% if home %}class="current_page_item"{% endif %}><a href="/">FireSmoke.ca</a></h1>	<!--  class="current_page_item"  -->
+				</div>
+				<nav id="nav">
+					<ul>
+						<li {% if forecast %}class="current_page_item"{% endif%}><a href="/forecasts/canada/UTC/current">Forecast</a>
+							<ul>
+								<li><a href="/forecasts/canada/UTC/current">Canada</a></li>  <!-- "/forecast_canada" -->
+								<li><a href="/forecasts/east/UTC/current">East</a></li>
+								<li><a href="/forecasts/west/UTC/current">West</a></li>
+								<li><a href="/forecasts/development/UTC/current">Development</a></li>
+							</ul>
+						</li>
+						<li {% if data %}class="current_page_item"{% endif%}><a href="/data">Data</a></li>
+						<li {% if resources %}class="current_page_item"{% endif%}><a href="/resources">Resources</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+</div>

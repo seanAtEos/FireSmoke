@@ -1,0 +1,87 @@
+{% extends "app-base.jinja2" %}
+
+{% block title %}Forecast{% endblock %}
+
+{% block content %}
+
+
+
+<div id="main-wrapper">
+	<div class="container">
+		<h3 id="forecast-title">Forecast for {%if region == 'Canada' %}Canada{% elif region == 'East'%}Eastern{% elif region == 'West'%}West{% elif region == 'Development' %}Developmental{% endif %} on {{ forecast_date }}</h3>
+		{% if error %}<p>{{ error }}</p>{% endif %}
+		<div class="container" id="dropdown-wrapper">
+			{{ form.render() | safe() }}
+		</div>
+		
+		<script type="text/javascript">
+			OpsImgs =[
+			{#{%- if tarsuccess -%}#}
+			{% if not error %}
+				{% for image in image_set %}
+				'{{ image }}',
+				{%- endfor %}
+			{%- endif -%}
+			];
+		
+				
+			    var ImgNum = 0;
+				var ImgLen = OpsImgs.length - 1;
+				var datespec;
+				var delay = 300; // Delay between images (msec)
+				var lock = false;
+				var run;
+			
+				function chgImg(direction) {
+					if (document.images) {
+						ImgNum = ImgNum + direction;
+						if (ImgNum > ImgLen) {
+							ImgNum = 0;
+						}
+						if (ImgNum < 0) {
+							ImgNum = ImgLen;
+						}
+						document.getElementById('forecast-image-{{region}}').src = OpsImgs[ImgNum];
+						datespec = OpsImgs[ImgNum].substr(-14,10);
+						document.getElementById('imgtag').innerHTML = datespec;
+					}
+				}
+			
+				function auto() {
+					if (lock == true) {
+						lock = false;
+						document.getElementById('toggle').innerHTML = "Auto";
+						window.clearInterval(run);
+					}
+					else if (lock == false) {
+						lock = true;
+						document.getElementById('toggle').innerHTML = "Manual";
+						run = setInterval("chgImg(1)", delay);
+					}
+				}
+			
+		</script>
+		
+		{#{% if error is not defined %}#}
+		{% if not error %}
+		<img id="forecast-image-{{region}}" src={{request.static_url('firesmoke:cache/images-canada-20140420-18/dispersion-2014042018.jpg')}} /><br />
+        <img id="PM25-legend" src={{request.static_url('firesmoke:static/images/PM25-legend.gif')}} />
+		
+		<div id="slideshow-options">
+			<td>&nbsp;</td>
+			<th><p>Current image:
+			<span id="imgtag">2013070600</span><br />
+				(YYYYMMDDHH)</p>
+				<a href="javascript:chgImg(-1)">< Prev</a> &nbsp; | &nbsp;
+				<a id="toggle" href="javascript:auto()">Auto</a> &nbsp; | &nbsp;
+				<a href="javascript:chgImg(1)">Next ></a>
+			</th>
+		</div>
+		<div id="forecast-aside">
+			<a href=""></a>
+		</div>
+		{% endif %}
+	</div>
+</div>
+		
+{% endblock %}

@@ -1,0 +1,106 @@
+{% extends "base.jinja2" %}
+
+{% block header %}
+	
+	<div id="header-wrapper">
+		<header class="container" id="site-header">  <!-- id="site-header-home" -->
+			<div class="row">
+				<div class="12u">
+					<div id="logo">
+						<h1 {% if home %}class="current_page_item"{% endif %}><a href="/">FireSmoke.ca</a></h1>	<!--  class="current_page_item"  -->
+					</div>
+					<nav id="nav">
+						<ul>
+							<li {% if forecast %}class="current_page_item"{% endif%}><a href="/forecasts">Forecast</a>
+								<ul>
+									<li><a href="/forecast">Canada</a></li>  <!-- "/forecast_canada" -->
+									<li><a href="/forecast_east">East</a></li>
+									<li><a href="/forecast_west">West</a></li>
+									<li><a href="/forecast_development">Development</a></li>
+								</ul>
+							</li>	
+							<li {% if data %}class="current_page_item"{% endif%}><a href="/data">Data</a></li>
+							<li {% if resources %}class="current_page_item"{% endif%}><a href="/resources">Resources</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+	</div>
+	
+	{% if prints %}
+		<h3>This is a successful Test</h3>
+	{% endif %}
+	
+{% endblock %}
+
+{% block footer %}
+	
+	<div id="footer-wrapper">
+		<footer class="container" id="site-footer">
+			<div class="row">
+				<div class="3u">
+					<section class="first">
+						<h2>Ipsum et phasellus</h2>
+						<ul class="link-list">
+							<li><a href="#">Mattis et quis rutrum sed accumsan</a>
+							<li><a href="#">Suspendisse amet varius nibh</a>
+							<li><a href="#">Suspenddapibus amet mattis quis</a>
+							<li><a href="#">Rutrum accumsan eu varius</a>
+							<li><a href="#">Nibh lorem sed dolore et ipsum.</a>
+						</ul>
+					</section>
+				</div>
+				<div class="3u">
+					<section>
+						<h2>Lorem mattis dolor</h2>
+						<ul class="link-list">
+							<li><a href="#">Duis neque nisi dapibus sed</a>
+							<li><a href="#">Suspenddapibus amet mattis quis</a>
+							<li><a href="#">Rutrum accumsan eu varius</a>
+							<li><a href="#">Nibh lorem sed dolore et ipsum.</a>
+							<li><a href="#">Mattis et quis rutrum sed accumsan</a>
+						</ul>
+					</section>
+				</div>
+				<div class="3u">
+					<section>
+						<h2>Mattis quis tempus</h2>
+						<ul class="link-list">
+							<li><a href="#">Suspendisse amet varius nibh</a>
+							<li><a href="#">Suspenddapibus amet mattis quis</a>
+							<li><a href="#">Rutrum accumsan eu varius</a>
+							<li><a href="#">Nibh lorem sed dolore et ipsum.</a>
+							<li><a href="#">Duis neque nisi dapibus sed</a>
+						</ul>
+					</section>
+				</div>
+				<div class="3u">
+					<section class="last">
+						<h2>Odio et phasellus</h2>
+						<ul class="link-list">
+							<li><a href="#">Rutrum accumsan eu varius</a>
+							<li><a href="#">Nibh lorem sed dolore et ipsum.</a>
+							<li><a href="#">Duis neque nisi dapibus sed</a>
+							<li><a href="#">Mattis et quis rutrum sed accumsan</a>
+							<li><a href="#">Suspendisse amet varius nibh</a>
+						</ul>
+					</section>
+				</div>
+			</div>
+			<div class="row">
+				<div class="12u">
+					<div class="divider"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="12u">
+					<div id="copyright">
+						&copy; FireSmoke.ca. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	
+{% endblock %}

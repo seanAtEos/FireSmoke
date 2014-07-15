@@ -1,0 +1,805 @@
+[2013-07-06 07:15:01] BlueSky framework 'bluesky_nested' starting ...
+
+[2013-07-06 07:15:01] Downloading fire data ...
+BlueSky: BlueSky Framework version 3.1.3 (rev 10700)
+BlueSky: Using OUTPUT_DIR: /bluesky/bluesky_nested/input/fires
+BlueSky: Using WORK_DIR: /bluesky/bluesky_nested/working/2013070600.1/
+BlueSky: Emissions period: 20130704 00Z to 20130707 00Z
+BlueSky: Dispersion period: 20130706 00Z to 20130707 00Z
+SmartFire2: Downloading fire data for 2013-07-04 from SmartFire2...
+SmartFire2: Downloading fire data for 2013-07-05 from SmartFire2...
+SmartFire2: Downloading fire data for 2013-07-06 from SmartFire2...
+SmartFire2: Successfully downloaded data for 1138 fire locations
+NoOpFireInformation: NoOpFireInformation from package BlueSky v3.1.3
+StandardFiles: Writing fire locations to standard format file
+StandardFiles: Successfully wrote 1138 fire locations
+Archive: Creating archive: /bluesky/bluesky_nested/input/fires/archive-2013070600.tar.gz
+BlueSky: Completed in 16.83 seconds
+
+[2013-07-06 07:15:18] Filtering fire data ...
+
+[2013-07-06 07:15:18] Linking met data ...
+
+[2013-07-06 07:15:19] Creating smoke forecast ...
+BlueSky: BlueSky Framework version 3.1.3 (rev 10700)
+BlueSky: Using OUTPUT_DIR: /bluesky/bluesky_nested/output/2013070600.1/
+BlueSky: Using WORK_DIR: /bluesky/bluesky_nested/working/2013070600.1/
+BlueSky: Emissions period: 20130705 00Z to 20130708 12Z
+BlueSky: Dispersion period: 20130706 00Z to 20130708 12Z
+StandardFiles: Reading fire locations from standard format file
+StandardFiles: Successfully read 286 fire locations
+StandardFiles: Reading fire events from standard format file
+StandardFiles: Successfully read 367 fire events
+MM5: Got 61 nested MM5 files
+MM5: Got 61 MM5 files
+MM5: Available meteorology: 20130706 00Z to 20130709 12Z
+MM5: Dispersion will run for 60 hours
+MM5LocalMet: Extract fire-local meteorological data v2
+MM5LocalMet: Filled elevation data for 0 of 286 fires
+FillDefaultData: Provide defaults for missing input fields v3.1.3
+FillDefaultData: Filled time zone for 14 of 286 fires (guessed for 272)
+FillDefaultData: FireLocationData: SF11C1913279956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914169956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914179956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914189956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914199956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914209956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914249956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914259956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914269956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914279956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914299956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914309956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914319956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914329956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914339956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914349956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914389956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914549956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914639956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914649956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914669956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914699956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914719956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914729956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914739956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914759956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914769956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914779956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914889956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914899956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914909956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914919956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1914969956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915019956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915059956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915159956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915179956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915199956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915299956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915319956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915369956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915439956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915449956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915459956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915559956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915569956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915579956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915589956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915599956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915609956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915669956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915719956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915769956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915809956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915829956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915849956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915909956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915929956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1915959956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916009956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916019956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916029956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916039956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916069956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916089956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916099956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916129956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916149956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916159956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916189956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916199956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916219956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916239956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916249956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916349956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916419956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916429956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916439956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916449956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916459956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916519956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916529956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916549956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916569956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916579956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916669956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916689956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916739956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916779956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916909956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916929956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916939956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916959956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916969956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916989956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1916999956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917079956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917109956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917119956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917179956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917189956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917219956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917229956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917259956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917299956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917329956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917339956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917359956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917369956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917429956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917439956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917449956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917459956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917469956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917479956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917499956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917549956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917559956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917569956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917579956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917589956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917599956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917609956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917619956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917629956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917639956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917649956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917659956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917669956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917679956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917689956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917699956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917709956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917929956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917979956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917989956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1917999956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918039956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918069956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918129956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918139956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918169956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918179956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918189956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918209956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918219956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918229956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918239956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918249956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918379956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918689956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918699956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918739956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918749956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918759956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918769956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918779956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918829956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918849956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918869956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918899956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1918909956523340 is before emissions period. Removing fire.
+FillDefaultData: Earliest fire in data set ignites 19 hours before analysis period
+GrowthSplit: FireTypeSplitter from package BlueSky v3.1.3
+WildfireGrowth: Persistence from package BlueSky v3.1.3
+WildfireGrowth: Persistence model created 363 new fire records
+PrescribedFireGrowth: NoGrowth from package BlueSky v3.1.3
+OtherFireGrowth: Persistence from package BlueSky v3.1.3
+OtherFireGrowth: Persistence model created 0 new fire records
+ConsolidateGrowth: ConsolidateFires from package BlueSky v3.1.3
+FCCS: FCCS Fuel Loading Module v1
+FCCS: Successfully added fuel loadings for 28 of 487 input fires
+ConsumptionSplit: FireTypeSplitter from package BlueSky v3.1.3
+WildfireConsumption: CONSUME Consumption Module v1
+WildfireConsumption: Running CONSUME v3 Consumption model
+PrescribedFireConsumption: CONSUME Consumption Module v1
+PrescribedFireConsumption: Running CONSUME v3 Consumption model
+OtherFireConsumption: CONSUME Consumption Module v1
+OtherFireConsumption: Running CONSUME v3 Consumption model
+ConsolidateConsumption: ConsolidateFires from package BlueSky v3.1.3
+FEPSTimeProfile: FEPS Time Profile Module v2
+FEPSTimeProfile: Running FEPS Time Profile model
+FEPSEmissions: FEPS Emissions Module v2
+FEPSEmissions: Running FEPS Emissions model
+FEPSPlumeRise: FEPS Plume Rise Module v2
+FEPSPlumeRise: Running FEPS Plume Rise model
+MM5ToARL: Convert MM5-format met data to ARL format v5
+MM5ToARL: Converting MM5 data into ARL format for the HYSPLIT model
+Context: Keeping a copy of hysplit.arl in cache
+MM5ToARL: Converting Nested MM5 data into ARL format for the HYSPLIT model
+Context: Keeping a copy of hysplit_nest.arl in cache
+HYSPLITDispersion: HYSPLIT Dispersion model v5
+HYSPLITDispersion: Running the HYSPLIT Dispersion model
+HYSPLITDispersion: /bluesky/bluesky_nested/working/2013070600.1/MM5ToARL/hysplit.arl
+HYSPLITDispersion: /bluesky/bluesky_nested/working/2013070600.1/MM5ToARL/hysplit_nest.arl
+HYSPLITDispersion: Number of vertical emission levels reduced by factor of 20
+HYSPLITDispersion: Number of vertical emission quantiles will be 1
+HYSPLITDispersion: User-defined sampling/concentration grid invoked
+HYSPLITDispersion: Dumping particles to PARDUMP starting at 2013-07-07 00:00:00+00:00 every 12 hours
+HYSPLITDispersion: Converting HYSPLIT output to NetCDF format
+StandardFiles: Writing fire locations to standard format file
+StandardFiles: Successfully wrote 487 fire locations
+MapImages: Creating map images from dispersion data
+MapImages: Wrote 60 image files
+KMLAnimation: Creating KML from dispersion data
+KMLAnimation: Creating KMZ file smoke_dispersion.kmz
+Archive: Creating archive: /bluesky/bluesky_nested/output/2013070600.1/archive-2013070600.tar.gz
+BlueSky: Completed in 2 hours 18 minutes 28.97 seconds
+
+[2013-07-06 09:33:49] Distributing & archiving forecast ...
+/bin/mv: cannot move `/bluesky/bluesky_nested/output/2013070600.1' to a subdirectory of itself, `/bluesky/bluesky_nested/output/2013070600.1/2013070600.1'
+/bin/tar: Removing leading `/' from member names
+/bluesky/bluesky_nested/output/2013070600.1/
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070702.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070612.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070722.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070619.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070610.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070808.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070809.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070807.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070622.jpg
+/bluesky/bluesky_nested/output/2013070600.1/fire_events.csv
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070707.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070721.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070617.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070723.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070805.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070705.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070709.jpg
+/bluesky/bluesky_nested/output/2013070600.1/fire_emissions.csv
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070706.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070614.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070803.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070810.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070613.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070801.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070712.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070604.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070800.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070605.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070602.jpg
+/bluesky/bluesky_nested/output/2013070600.1/smoke_dispersion.kmz
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070620.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070606.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070603.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070623.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070609.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070607.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070703.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070611.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070716.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070804.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070708.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070717.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070720.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070811.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070718.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070802.jpg
+/bluesky/bluesky_nested/output/2013070600.1/fire_locations.csv
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070711.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070719.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070616.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070704.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070621.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070713.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070618.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070714.jpg
+/bluesky/bluesky_nested/output/2013070600.1/summary.txt
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070615.jpg
+/bluesky/bluesky_nested/output/2013070600.1/smoke_dispersion.nc
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070601.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070700.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070710.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070806.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070715.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070608.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070701.jpg
+/bluesky/bluesky_nested/output/2013070600.1/dispersion_2013070600.jpg
+
+[2013-07-06 09:33:52] Indexing 4 km ARL files ...
+Scanning folder: "/bluesky/archive/ARL/4km"...
+Warning: existing arlindex.txt will be overwritten.
+Scanning 236 files...
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013041000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013020800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013053000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013013000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013010400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013020700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013022100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013030600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013010600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013010700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013040700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013041200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013033100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013050800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013022400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013040600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013030700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013041600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013022000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013020900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013010300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013050200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013050100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013010200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013020600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061600.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051600.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2012082400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013040100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013063000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013050900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013030900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062600.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013010500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013041900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013022800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013050600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013022200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2012082300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013020500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013022700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013040400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013010900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013053100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013053000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051700.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013030200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042212.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013050500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013020200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013040500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013050700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061700.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013040200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062700.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013030100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013030400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2012082100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013043000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013010100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013063000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013040812.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013050400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013030300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013022300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013020100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013041100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013070300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013022500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013040300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013020300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013050300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052600.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013053100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013030800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013041800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013041700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2012082200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013033000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013042600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013030500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013013100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013011900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013021200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013062100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013010800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060700.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013041300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013051500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013031800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013032600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013012300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013020400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013060800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013040900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013052100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013061500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/4km/hysplit_nest.2013022600.arl"... done!
+Complete!
+
+[2013-07-06 12:00:40] Indexing 12 km ARL files ...
+Scanning folder: "/bluesky/archive/ARL/12km"...
+Warning: existing arlindex.txt will be overwritten.
+Scanning 236 files...
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013041200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013040500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013041800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013020200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061600.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013050500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060700.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062700.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013050700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013013100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013050900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013040600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013050400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013030700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013030500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013030600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013030400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013041900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013020900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013050100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013013000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013030200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042212.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2012082300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013010900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013022700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013030300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013033000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013022600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013050200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013053100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013022300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013033100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013030100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013020100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013050800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013020600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062600.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013010300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013040200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013053100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070300.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013022400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013010500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013040100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013040700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013010400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013020800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052600.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013022100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051700.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013050600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013022800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013030800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2012082200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013043000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051600.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013022000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013020400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062800.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013010600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013063000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013050300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013040400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013022500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013022200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013040300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013010200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013010700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013041700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013021100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2012082400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013010100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060100.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013041100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060400.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013062900.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061500.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013053000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013020700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013020500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013012700.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061700.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013040900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2012082100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013041300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013041600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052100.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061200.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042500.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013070400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013061000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013052200.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013030900.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013051300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013020300.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013060400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013011800.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013042400.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013031600.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013040812.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013053000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013032000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013063000.wrf.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013041000.arl"... done!
+Scanning file: "/bluesky/archive/ARL/12km/hysplit.2013010800.arl"... done!
+Complete!
+
+[2013-07-06 12:33:02] BlueSky framework 'bluesky_nested' done.

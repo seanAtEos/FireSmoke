@@ -1,0 +1,445 @@
+/*
+	Arcana 2.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Desktop (>= 480px)                                                            */
+/*********************************************************************************/
+
+/* Wrappers */
+
+	#main-wrapper
+	{
+		background: #fff;
+		padding: 2em 0 4em 0;
+	}
+
+	#header-wrapper
+	{
+		box-shadow: inset 0px 10px 80px 0px rgba(0,0,0,0.2);
+		height: 102px;
+		position: relative;
+		padding: 2.25em 0 2.25em 0;
+	}
+
+	#footer-wrapper
+	{
+		padding: 3.5em 0 5em 0;
+		box-shadow: inset 0px 10px 60px 0px rgba(0,0,0,0.15);
+	}
+
+/* Site Header */
+
+	#site-header
+	{
+		position: relative;
+		background: url('images/header1.png');
+		background-size: 100% 190px;
+		height: 190px;
+		text-shadow: -1px -1px 1px rgba(0,0,0,1);
+	}
+
+/* Logo */
+
+	#logo
+	{
+		position: absolute;
+		left: 40px;
+		top: 0;
+		height: 85px;
+		line-height: 85px;
+	}
+
+		#logo h1
+		{
+			font-size: 2em;
+			letter-spacing: -1px;
+			color: #fff;
+		}
+		
+		#logo span 
+		{
+			display: inline-block;
+			border-left: solid 2px #d0d0d0;
+			margin-left: 1em;
+			padding-left: 1em;
+		}
+
+/* Site Nav */
+	h1.current_page_item
+	{
+		background: url('images/nav-arrow.png') center 75px no-repeat;
+	}
+
+		h1.current_page_item a
+		{
+			color: #fff;
+		}
+
+	#nav
+	{
+		position: absolute;
+		top: 0;
+		left: 275px;
+		font-family: "Arial", sans-serif;
+		text-align: right; /* Not sure what this is doing */
+	}
+
+		#nav ul
+		{
+			list-style: none;
+			overflow: hidden;
+		}
+
+			nav ul:after {
+				content: ""; clear: both; display: block;
+			}
+
+			#nav ul li
+			{
+				display: block;
+				float: left;
+				text-decoration: none;
+				font-size: 1.5em;
+				height: 83px;
+				line-height: 100px;
+				margin: 0 0 0 1.75em;
+			}
+
+				#nav ul li a
+				{
+					color: #c0c0c0;
+					text-decoration: none;
+					outline: 0;
+					
+				}
+
+				#nav ul li a:hover
+				{
+					color: #eee;
+				}
+
+			#nav ul li.current_page_item
+			{
+				/*background: url('images/nav-arrow.png') center 77px no-repeat;*/
+			}
+
+				#nav ul li.current_page_item a
+				{
+					color: #fff;
+				}
+
+	/******************************/
+			#nav ul ul {
+				display: none;
+				background: #1e1e1e; border-radius: 0px; padding: 0;
+				position: absolute; top: 100%;
+			}
+
+				#nav ul li:hover > ul {
+					display: block;
+				}
+
+					#nav ul:after {
+					content: ""; clear: both; display: block;
+				}
+
+				#nav ul ul li {
+					float: none;
+					margin: 0;
+					padding: 0;/* 25px;*/
+					border-top: 1px solid #6b727c;
+					font-size: 0.85em;
+					
+					text-align: center;
+					height: 50px;
+					line-height: 50px;
+				}
+
+					#nav ul ul li a {
+						display: inline-block;
+						/*text-align: left;*/
+						/*padding:; 45px 15px;*/
+						/*margin: auto;*/
+						/*padding: 0px 50px;*/
+						width: 160px;
+						color: #c0c0c0;
+					}	
+						#nav ul ul li a:hover {
+							color: #eee
+						}
+
+/******************************/
+
+/* Banner and Titles */
+
+	h3
+	{
+		font-size: 2em;
+		letter-spacing: -1px;
+	}
+
+
+	#banner
+	{
+		margin: 0 0 3em 0;
+	}
+
+		#banner a
+		{
+		}
+
+			#banner a img
+			{
+				width: 100%;
+				display: block;
+			}
+
+		#banner .caption
+		{
+			background: #1e1e1e url('images/bg3.png') top left repeat-x;
+			font-size: 2em;
+			color: #aaa;
+			/*
+			text-align: center;
+			text-shadow: -1px -1px 1px rgba(0,0,0,1);
+			*/
+			height: 1px;
+			padding: 0.6em 0 0.6em 0;
+		}
+
+			#banner .caption span
+			{
+			}
+			
+				#banner .caption span strong
+				{
+					color: #ffffff;
+				}
+		
+			#banner .caption .button
+			{
+				border: solid 1px #001916;
+				margin-left: 0.8em;
+			}
+
+	/* Forecast date dropdown menu */
+	#dropdown-wrapper .deformFormFieldset
+	{
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#dropdown-wrapper .form-group
+	{
+		display: inline-block;
+	}
+	#dropdown-wrapper #item-deformField1,
+	#dropdown-wrapper #item-deformField2,
+	#dropdown-wrapper #item-deformField3,
+	#dropdown-wrapper #item-deformField4
+	{
+		width: 120px;
+		padding: 0px;
+		margin: 0px;
+	}
+
+	/* Forecast Images */
+	#forecast-image-Canada
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 600px;
+		width: 600px;
+		border: 1px solid #999999;
+
+	}
+
+	#forecast-image-East
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 600px;
+		width: 600px;
+		border: 1px solid #999999;
+
+	}
+
+	#forecast-image-West
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 600px;
+		width: 600px;
+		border: 1px solid #999999;
+
+	}
+
+	#forecast-image-Development
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		height: 600px;
+		width: 600px;
+		border: 1px solid #999999;
+
+	}
+
+	#PM25-legend
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 641px;
+		height: 55px;
+	}
+
+	#slideshow-options
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	/* not sure if these two are needed any more */
+	#controls
+	{
+		width: 250px;
+		height: 150px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#controls p
+	{
+		text-align: center;
+	}
+
+/* Site Footer */
+	#site-footer
+	{
+		text-shadow: 1px 2px 0px #fff;
+	}
+
+		#site-footer a
+		{
+			text-decoration: none;
+			color: #525252;
+		}
+
+		#site-footer a:hover
+		{
+			text-decoration: underline;
+		}
+
+
+		#site-footer ul li
+		{
+			line-height: 2.5em;
+		}
+
+		#site-footer .divider
+		{
+			border-top: solid 1px #d0d0d0;
+			border-bottom: solid 1px #d0d0d0;
+			height: 4px;
+			margin: 1em 0 1em 0;
+		}
+
+	/* Forecast date dropdown menu */
+	#contact-form .deformFormFieldset
+	{
+		width: 65%;
+		margin-left: 17%;
+		/*margin-right: auto;*/
+	}
+	
+	#contact-form .form-group label
+	{
+		vertical-align: top;
+		float:left;
+		width: 100px;
+		text-align: right;
+		margin-right: 15px;
+	}
+	
+	#contact-form .form-group input
+	{
+		display: block;
+		float: left;
+		vertical-align: bottom;
+	}
+
+	#contact-form #item-deformField1,
+	#contact-form #item-deformField2,
+	#contact-form #item-deformField3,
+	#contact-form #item-deformField4
+	{
+		padding: 0px;
+		margin: 0 0 10px 0;
+		height: 18px;
+		line-height: 18px;
+	}
+
+	#contact-form button
+	{
+		margin-left: 115px;
+	}
+
+/* Copyright */
+	
+	#copyright
+	{
+		text-align: center;
+		color: #868686;
+	}
+
+		#copyright a
+		{
+			color: #868686;
+		}
+		
+/* Subpage */
+
+	.subpage
+	{
+		padding-top: 4em !important;
+	}
+
+		.subpage article
+		{
+			padding: 0 1em 0 1em;
+		}
+
+		.subpage article.first
+		{
+			padding: 0 1em 0 0;
+		}
+
+		.subpage article.last
+		{
+			padding: 0 0 0 1em;
+		}
+
+		.subpage h2
+		{
+			font-size: 2.2em;
+		}
+
+		.subpage p
+		{
+			margin: 0 0 1.5em 0;
+		}
+
+		.subpage section, .subpage article
+		{
+			margin: 0 0 2em 0;
+		}

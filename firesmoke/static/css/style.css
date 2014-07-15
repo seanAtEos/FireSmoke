@@ -1,0 +1,217 @@
+/*
+	Arcana 2.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Global                                                                        */
+/*********************************************************************************/
+
+/* Basic */
+
+	*,*:before,*:after{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;-o-box-sizing:content-box;-ms-box-sizing:content-box;box-sizing:content-box}
+
+	body
+	{
+		background: #f0f0f0 url('images/bg1.png');
+		/*background-color: green;*/
+		font-family: "Arial", sans-serif;
+		font-size: 14pt;
+		line-height: 1.75em;
+		color: #4c4c4c;
+	}
+
+	h2, h3
+	{
+		font-size: 1.2em;
+		letter-spacing: -1px;
+		margin: 0 0 0.75em 0;
+		text-align: center;
+	}
+
+	h2 a
+	{
+		color: inherit;
+	}
+
+	strong
+	{
+		color: #1d1d1d;
+	}
+
+	a
+	{
+		color: #478903;
+		text-decoration: underline;
+	}
+
+	a:hover
+	{
+		text-decoration: none;
+	}
+
+	h1,h2,h3,h4,
+	{
+		font-family: "Arial", sans-serif;
+		color: #1d1d1d;
+	}
+
+	h1 a
+	{
+		color: #c0c0c0;
+		text-decoration: none;
+		outline: 0;
+		padding: 0 0 20px 0;
+		/*border: 1px solid white;*/
+	}
+
+	h1 a:hover
+	{
+		color: #eee;
+	}
+
+/* Reusable */
+
+	.button
+	{
+		display: inline-block;
+		background: #fff;
+		box-shadow: inset 0px 0px 0px 1px #fa643c, 0px 2px 3px 0px rgba(0,0,0,0.25);
+		border: solid 1px #fa643c;
+		border-radius: 6px;
+		padding: 0.45em 1.1em 0.5em 1.1em;
+		color: #fff;
+		font-size: 0.8em;
+		text-decoration: none;
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.5);
+		background-image: -moz-linear-gradient(top, #e44d26, #e04a22);
+		background-image: -webkit-linear-gradient(top, #e44d26, #e04a22);
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e44d26), to(#e04a22));
+		background-image: -ms-linear-gradient(top, #e44d26, #e04a22);
+		background-image: -o-linear-gradient(top, #e44d26, #e04a22);
+		background-image: linear-gradient(top, #e44d26, #e04a22);
+		outline: 0;
+		white-space: nowrap;
+	}
+
+	.button:hover
+	{
+		background: #fa643c;
+		background-image: -moz-linear-gradient(top, #fa643c, #e44d26);
+		background-image: -webkit-linear-gradient(top, #fa643c, #e44d26);
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fa643c), to(#e44d26));
+		background-image: -ms-linear-gradient(top, #fa643c, #e44d26);
+		background-image: -o-linear-gradient(top, #fa643c, #e44d26);
+		background-image: linear-gradient(top, #fa643c, #e44d26);
+	}
+
+	.button:active
+	{
+		background: #fa643c;
+		background-image: -moz-linear-gradient(top, #e44d26, #fa643c);
+		background-image: -webkit-linear-gradient(top, #e44d26, #fa643c);
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e44d26), to(#fa643c));
+		background-image: -ms-linear-gradient(top, #e44d26, #fa643c);
+		background-image: -o-linear-gradient(top, #e44d26, #fa643c);
+		background-image: linear-gradient(top, #e44d26, #fa643c);
+	}
+
+	.divider
+	{
+		border-top: solid 1px #e5e5e5;
+		border-bottom: solid 1px #e5e5e5;
+		height: 4px;
+		margin: 2em 0 2em 0;
+	}
+
+	.divider-top
+	{
+		margin-bottom: 0;
+	}
+
+	.divider-bottom
+	{
+		margin-top: 0;
+	}
+
+	.cta-box
+	{
+		background: url('images/bg2.png');
+		text-align: center;
+		padding: 1.25em 0 1.25em 0;
+		text-shadow: 1px 2px 0px #fff;
+		font-size: 2em;
+	}
+
+		.cta-box .button
+		{
+			margin-left: 0.8em;
+		}
+
+	.highlight-box
+	{
+		background: url('images/bg2.png');
+		text-align: center;
+		padding: 3.5em 0 3.5em 0;
+		text-shadow: 1px 2px 0px #fff;
+	}
+
+		.highlight-box h2
+		{
+			font-size: 3.2em;
+			letter-spacing: -3px;
+			margin: 0 0 0.6em 0;
+		}
+		
+		.highlight-box span
+		{
+			font-size: 2em;
+			color: #a1a1a1;
+		}	
+
+
+	.link-list
+	{
+	}
+	
+		.link-list li
+		{
+			border-top: solid 1px #d0d0d0;
+			line-height: 2.5em;
+		}
+		
+		.link-list li:first-child
+		{
+			border-top: none;
+		}
+
+	#footer-links
+	{
+		width: 38%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#footer-links p
+	{
+		font-size: 1.1em;
+	}
+
+	#contact-us
+	{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#contact-labels p
+	{
+		text-align: center;
+	}
+
+	#contact-forms p
+	{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}

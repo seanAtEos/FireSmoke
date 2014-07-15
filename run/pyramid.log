@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "/Volumes/Users/shayes/.venvs/BlueSky/bin/pserve", line 9, in <module>
+    load_entry_point('pyramid==1.5', 'console_scripts', 'pserve')()
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/pyramid/scripts/pserve.py", line 51, in main
+    return command.run()
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/pyramid/scripts/pserve.py", line 313, in run
+    relative_to=base, global_conf=vars)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/pyramid/scripts/pserve.py", line 344, in loadserver
+    server_spec, name=name, relative_to=relative_to, **kw)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/paste/deploy/loadwsgi.py", line 255, in loadserver
+    return loadobj(SERVER, uri, name=name, **kw)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/paste/deploy/loadwsgi.py", line 271, in loadobj
+    global_conf=global_conf)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/paste/deploy/loadwsgi.py", line 296, in loadcontext
+    global_conf=global_conf)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/paste/deploy/loadwsgi.py", line 317, in _loadconfig
+    loader = ConfigLoader(path)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/paste/deploy/loadwsgi.py", line 393, in __init__
+    with open(filename) as f:
+IOError: [Errno 2] No such file or directory: '/Volumes/Users/shayes/Projects/BlueSky/FireSmoke/deveopment.ini'
+Removing PID file run/pyramid.pid
+Starting server in PID 3481.
+Traceback (most recent call last):
+  File "/Volumes/Users/shayes/.venvs/BlueSky/bin/pserve", line 9, in <module>
+    load_entry_point('pyramid==1.5', 'console_scripts', 'pserve')()
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/pyramid/scripts/pserve.py", line 51, in main
+    return command.run()
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/pyramid/scripts/pserve.py", line 337, in run
+    serve()
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/pyramid/scripts/pserve.py", line 327, in serve
+    server(app)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/paste/deploy/loadwsgi.py", line 189, in server_wrapper
+    **context.local_conf)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/paste/deploy/util.py", line 55, in fix_call
+    val = callable(*args, **kw)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/waitress-0.8.8-py2.7.egg/waitress/__init__.py", line 21, in serve_paste
+    serve(app, **kw)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/waitress-0.8.8-py2.7.egg/waitress/__init__.py", line 11, in serve
+    server = _server(app, **kw)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/waitress-0.8.8-py2.7.egg/waitress/server.py", line 44, in create_server
+    return cls(application, map, _start, _sock, _dispatcher, adj)
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/waitress-0.8.8-py2.7.egg/waitress/server.py", line 76, in __init__
+    self.bind_server_socket()
+  File "/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/waitress-0.8.8-py2.7.egg/waitress/server.py", line 184, in bind_server_socket
+    self.bind((self.adj.host, self.adj.port))
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 48] Address already in use
+Removing PID file run/pyramid.pid
+Starting server in PID 3501.
+serving on http://0.0.0.0:6543
+2014-06-19 01:57:21,948 ERROR [waitress][MainThread] uncaptured python exception, closing channel <waitress.server.TcpWSGIServer listening 0.0.0.0:6543 at 0x109825650> (<class 'socket.error'>:[Errno 22] Invalid argument [/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/asyncore.py|read|83] [/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/asyncore.py|handle_read_event|443] [/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/waitress-0.8.8-py2.7.egg/waitress/server.py|handle_accept|145] [/Volumes/Users/shayes/.venvs/BlueSky/lib/python2.7/site-packages/waitress-0.8.8-py2.7.egg/waitress/server.py|set_socket_options|191] [/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py|meth|224])
+2014-06-19 01:57:21,977 WARNI [waitress][MainThread] unhandled close event

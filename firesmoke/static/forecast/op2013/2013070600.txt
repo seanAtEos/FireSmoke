@@ -1,0 +1,397 @@
+
+[2013-07-06 10:15:02] BlueSky framework 'bluesky-op2013' starting ...
+
+[2013-07-06 10:15:02] Downloading fire data ...
+BlueSky: BlueSky Framework version 3.1.3 (rev 10700)
+BlueSky: Using OUTPUT_DIR: /bluesky/bluesky-op2013/input/fires
+BlueSky: Using WORK_DIR: /bluesky/bluesky-op2013/working/2013070600.1/
+BlueSky: Emissions period: 20130704 00Z to 20130707 00Z
+BlueSky: Dispersion period: 20130706 00Z to 20130707 00Z
+SmartFire2: Downloading fire data for 2013-07-04 from SmartFire2...
+SmartFire2: Downloading fire data for 2013-07-05 from SmartFire2...
+SmartFire2: Downloading fire data for 2013-07-06 from SmartFire2...
+SmartFire2: Successfully downloaded data for 1203 fire locations
+NoOpFireInformation: NoOpFireInformation from package BlueSky v3.1.3
+StandardFiles: Writing fire locations to standard format file
+StandardFiles: Successfully wrote 1203 fire locations
+Archive: Creating archive: /bluesky/bluesky-op2013/input/fires/archive-2013070600.tar.gz
+BlueSky: Completed in 27.83 seconds
+
+[2013-07-06 10:15:32] Filtering fire data ...
+Processing fire locations file /bluesky/bluesky-op2013/input/fires/fire_locations_20130706.csv ...
+Original number of fires: 1203
+Filtered number of fires: 394
+
+[2013-07-06 10:15:32] Linking met data ...
+
+[2013-07-06 10:15:33] Creating smoke forecast ...
+BlueSky: BlueSky Framework version 3.1.3 (rev 10700)
+BlueSky: Using OUTPUT_DIR: /bluesky/bluesky-op2013/output/2013070600.1/
+BlueSky: Using WORK_DIR: /bluesky/bluesky-op2013/working/2013070600.1/
+BlueSky: Emissions period: 20130705 00Z to 20130708 12Z
+BlueSky: Dispersion period: 20130706 00Z to 20130708 12Z
+StandardFiles: Reading fire locations from standard format file
+StandardFiles: Successfully read 394 fire locations
+StandardFiles: Reading fire events from standard format file
+StandardFiles: Successfully read 426 fire events
+WRF: Got 60 nested WRF files
+WRF: Got 60 WRF files
+WRF: Available meteorology: 20130706 00Z to 20130708 12Z
+WRF: Dispersion will run for 60 hours
+WRFLocalMet: Extract fire-local meteorological data v1
+WRFLocalMet: Obtaining met_domain_info from /bluesky/bluesky-op2013/input/met/wrfout_d02_2013-07-06_00:00:00
+WRFLocalMet: Unable to extract local met from WRF data; elevation is undefined
+FillDefaultData: Provide defaults for missing input fields v3.1.3
+FillDefaultData: Filled time zone for 50 of 394 fires (guessed for 344)
+FillDefaultData: FireLocationData: SF11C18618719913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18623019913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18668610543476510 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18673719913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18675619913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18677819913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18678319913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18678619913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18678919913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18679019913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18679119913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18679219913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18680719913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18681419913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18681519913046910 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1868249956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1868279956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1868289956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1868329956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1868359956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C18687613080102250 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1877709956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1877819956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1888279956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1888289956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1924629956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1924789956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1924799956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1924809956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1924859956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1924889956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1924899956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1924909956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1924969956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930539956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930549956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930559956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930569956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930579956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930599956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930609956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930619956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930719956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930729956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930759956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930769956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930779956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930939956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1930999956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931009956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931059956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931099956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931109956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931119956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931129956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931179956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931189956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931199956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931309956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931379956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931389956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931729956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931739956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931749956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931759956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931769956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931779956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931789956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931799956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931809956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931819956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931829956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931849956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931859956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931869956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931889956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1931949956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932039956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932049956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932069956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932089956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932209956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932219956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932229956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932239956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932329956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932389956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932409956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932429956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932449956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932539956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932579956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932639956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932649956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932659956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932739956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932749956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932759956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932769956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932819956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932869956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932919956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932949956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932959956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1932969956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933009956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933029956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933099956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933109956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933119956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933129956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933179956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933199956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933209956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933239956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933249956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933259956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933279956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933289956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933379956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933439956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933449956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933459956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933469956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933479956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933539956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933549956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933569956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933589956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933599956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933649956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933679956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933689956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933739956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933779956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933849956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933889956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933909956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933919956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933939956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933949956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933969956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1933979956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934059956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934089956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934099956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934159956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934169956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934199956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934209956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934239956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934249956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934269956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934279956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934309956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934319956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934339956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934349956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934409956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934419956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934429956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934439956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934449956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934469956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934519956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934529956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934539956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934549956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934559956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934569956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934579956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934589956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934599956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934609956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934619956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934629956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934639956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934649956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934659956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934669956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934679956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934749956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934789956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934809956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934819956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934829956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934839956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934929956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934939956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934949956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934969956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1934979956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935009956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935069956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935079956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935109956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935119956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935129956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935149956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935159956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935169956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935179956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935279956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935309956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935319956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935329956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935369956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935379956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935389956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935439956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935449956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935619956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935629956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935659956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935669956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935679956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935689956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935699956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1935709956523340 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19389219913046450 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19439713080102940 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19440713080102940 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C1944263123579140 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19449819913046450 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19450019913046450 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19450619913046450 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19451119913046450 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19544019913046450 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19655519913046450 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19656519913046450 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19657919913046450 is before emissions period. Removing fire.
+FillDefaultData: FireLocationData: SF11C19658119913046450 is before emissions period. Removing fire.
+FillDefaultData: Earliest fire in data set ignites 20 hours before analysis period
+GrowthSplit: FireTypeSplitter from package BlueSky v3.1.3
+WildfireGrowth: Persistence from package BlueSky v3.1.3
+WildfireGrowth: Persistence model created 475 new fire records
+PrescribedFireGrowth: NoGrowth from package BlueSky v3.1.3
+OtherFireGrowth: Persistence from package BlueSky v3.1.3
+OtherFireGrowth: Persistence model created 0 new fire records
+ConsolidateGrowth: ConsolidateFires from package BlueSky v3.1.3
+FCCS: FCCS Fuel Loading Module v1
+FCCS: Successfully added fuel loadings for 56 of 637 input fires
+ConsumptionSplit: FireTypeSplitter from package BlueSky v3.1.3
+WildfireConsumption: CONSUME Consumption Module v1
+WildfireConsumption: Running CONSUME v3 Consumption model
+PrescribedFireConsumption: CONSUME Consumption Module v1
+PrescribedFireConsumption: Running CONSUME v3 Consumption model
+OtherFireConsumption: CONSUME Consumption Module v1
+OtherFireConsumption: Running CONSUME v3 Consumption model
+ConsolidateConsumption: ConsolidateFires from package BlueSky v3.1.3
+FEPSTimeProfile: FEPS Time Profile Module v2
+FEPSTimeProfile: Running FEPS Time Profile model
+FEPSEmissions: FEPS Emissions Module v2
+FEPSEmissions: Running FEPS Emissions model
+FEPSPlumeRise: FEPS Plume Rise Module v2
+FEPSPlumeRise: Running FEPS Plume Rise model
+WRFToARL: Convert WRF-format met data to ARL format. v6
+WRFToARL: Converting WRF data into ARL format for the HYSPLIT model
+Context: Keeping a copy of hysplit.arl in cache
+WRFToARL: Converting Nested WRF data into ARL format for the HYSPLIT model
+Context: Keeping a copy of hysplit_nest.arl in cache
+HYSPLITDispersion: HYSPLIT Dispersion model v6
+HYSPLITDispersion: Running the HYSPLIT Dispersion model
+HYSPLITDispersion: /bluesky/bluesky-op2013/working/2013070600.1/WRFToARL/hysplit.arl
+HYSPLITDispersion: /bluesky/bluesky-op2013/working/2013070600.1/WRFToARL/hysplit_nest.arl
+HYSPLITDispersion: Number of vertical emission levels reduced by factor of 20
+HYSPLITDispersion: Number of vertical emission quantiles will be 1
+HYSPLITDispersion: Using particle initialization file /bluesky/bluesky-op2013/input/dispersion/PARINIT
+HYSPLITDispersion: User-defined sampling/concentration grid invoked
+HYSPLITDispersion: Dumping particles to PARDUMP starting at 2013-07-07 00:00:00+00:00 every 24 hours
+HYSPLITDispersion: Converting HYSPLIT output to NetCDF format
+StandardFiles: Writing fire locations to standard format file
+StandardFiles: Successfully wrote 637 fire locations
+MapImages: Creating map images from dispersion data
+MapImages: Wrote 60 image files
+KMLAnimation: Creating KML from dispersion data
+KMLAnimation: Creating KMZ file smoke_dispersion.kmz
+Archive: Creating archive: /bluesky/bluesky-op2013/output/2013070600.1/archive-2013070600.tar.gz
+BlueSky: Completed in 5 hours 22 minutes 37.25 seconds
+
+[2013-07-06 15:38:14] Distributing & archiving forecast ...
+/bin/mv: cannot move `/bluesky/bluesky-op2013/output/2013070600.1' to a subdirectory of itself, `/bluesky/bluesky-op2013/output/2013070600.1/2013070600.1'
+/bin/tar: Removing leading `/' from member names
+/bluesky/bluesky-op2013/output/2013070600.1/
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070702.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070612.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070722.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070619.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070610.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070808.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070809.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070807.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070622.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/fire_events.csv
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070707.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070721.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070617.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070723.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070805.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070705.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070709.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/fire_emissions.csv
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070706.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070614.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070803.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070810.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070613.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070801.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070712.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070604.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070800.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070605.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070602.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/smoke_dispersion.kmz
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070620.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070606.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070603.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070623.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070609.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070607.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070703.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070611.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070716.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070804.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070708.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070717.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070720.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070811.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070718.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070802.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/fire_locations.csv
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070711.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070719.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070616.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070704.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070621.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070713.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070618.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070714.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/summary.txt
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070615.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/smoke_dispersion.nc
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070601.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070700.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070710.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070806.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070715.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070608.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070701.jpg
+/bluesky/bluesky-op2013/output/2013070600.1/dispersion_2013070600.jpg
+
+[2013-07-06 15:39:03] Creating comparison test web page ...

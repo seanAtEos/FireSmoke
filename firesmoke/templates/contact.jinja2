@@ -1,0 +1,16 @@
+{% extends "app-base.jinja2" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+
+{% if message %}{{ message }}{% endif %}
+
+<div id="main-wrapper">
+	<div id="contact-form" class="container">
+		<!-- Contact Form -->
+		{{ form.render() | safe }}
+	</div>
+</div>
+
+{% endblock %}

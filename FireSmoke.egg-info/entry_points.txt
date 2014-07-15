@@ -1,0 +1,5 @@
+      [paste.app_factory]
+      main = firesmoke:main
+      [console_scripts]
+      initialize_FireSmoke_db = firesmoke.scripts.initializedb:main
+      
