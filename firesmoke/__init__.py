@@ -21,7 +21,7 @@ def main(global_config, **settings):
     # add static view for directory containing un-tarred forecasts here
     
     config.add_route('home', '/')    
-    config.add_route('forecasts', '/forecasts/{region}/{timezone}/{YYYYMMDDHH}')
+    config.add_route('forecasts', '/forecasts/{region}/{YYYYMMDDHH}')#{timezone}/{YYYYMMDDHH}')
     config.add_route('forecasts-redirect', '/forecasts/{region}')
     
     config.add_route('data', '/data')

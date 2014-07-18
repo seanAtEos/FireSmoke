@@ -124,8 +124,7 @@
 'static/forecast/op2013/dispersion_2013070809.jpg',
 'static/forecast/op2013/dispersion_2013070810.jpg',
 'static/forecast/op2013/dispersion_2013070811.jpg',
-
-    ];
+];
 
     var ImgNum = 0;
     var ImgLen = OpsImgs.length - 1;
@@ -162,3 +161,18 @@
             run = setInterval("chgImg(1)", delay);
         }
     }
+
+    function firstImg() {
+        ImgNum = 0;
+        document.getElementById('ops').src = OpsImgs[ImgNum];
+        datespec = OpsImgs[ImgNum].substr(-14,10);
+        document.getElementById('imgtag').innerHTML = datespec;
+    }
+
+    function lastImg() {
+        ImgNum = OpsImgs.length - 1;
+        document.getElementById('ops').src = OpsImgs[ImgNum];
+        datespec = OpsImgs[ImgNum].substr(-14,10);
+        document.getElementById('imgtag').innerHTML = datespec;
+    }
+

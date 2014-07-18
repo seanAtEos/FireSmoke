@@ -1,0 +1,484 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0b1 | 201101 
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+ 
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a { text-decoration: none; }
+
+/* ==============================*/
+body
+{
+    background: #FFF;
+    font: 1em/1.4em 'PT Sans', sans-serif;
+    color: #4c4c4c;
+}
+
+a {
+    color: #1D745A;
+}
+
+#sb-site {
+    width: 100%;
+}
+
+.header-wrapper {
+    height: 100px;
+
+}
+.header-wrapper,
+.body-wrapper,
+.footer-wrapper {
+    position: relative;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.header {
+    position: relative;
+    border-bottom: 8px solid #FC6900;
+    background: #232323;
+    height: 80px;
+    margin: 0 auto 15px;
+}
+        /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
+        header:before,
+        header:after {
+            content:"";
+            display:table;
+        }
+         
+        header:after {
+            clear:both;
+        }
+         
+        /* For IE 6/7 (trigger hasLayout) */
+        header {
+            zoom:1;
+        }
+
+.sb-toggle-left {
+    display: none; /* This needs to change on js load*/
+    float: left;
+    color: #fff;
+    background: #4e4e4e;
+    padding: 5px 10px;
+    margin: 20px;
+    font-size: .8em;
+    font-weight: bold;
+    line-height: 22px;
+    height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+h1.logo a {
+    /*position: absolute; top: 15px; left: 125px;*/
+    text-align: center;
+    padding: 20px 10px 10px;
+    display: block;
+    color: #d8d8d8;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    /*line-height: 1.5em;*/
+    letter-spacing: 0.1em;
+
+}
+
+/* non-slidebar navigation menu - must only be hidden if javascript enabled */
+nav {
+    display: block; /* This needs to change on js load*/
+    width: 275px;
+    margin-left: auto;
+    margin-right: auto;
+    /*position: absolute; left: 200px; top: 20px;*/
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    display: block;
+    padding: 5px;
+    color: #c0c0c0;
+    font-size: 1.35em;
+}
+
+nav li ul {
+    display: none;
+}
+
+/* slidebar navigation menu */
+#sb-menu {
+}
+
+#sb-menu li{
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-left: 3px solid transparent;
+}
+
+#sb-menu li.logo a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size:1.5em;
+}
+
+#sb-menu li:hover {
+    border-left: 3px solid #FC6900;
+}
+
+#sb-menu li a {
+    font-size: 1.5em;
+    color: #d8d8d8;
+    padding-left: 15px;
+}
+
+#sb-menu ul li {
+    display: none;
+}
+
+#sb-menu ul li.displayed {
+    display: block;
+    /*padding: 0;
+    margin: 0;*/
+    text-indent: 15px;
+    background: #2f2f2f;
+
+}
+
+#banner-image img {
+    display: none;
+}
+
+#banner-image{
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Forecast date dropdown menu */
+#dropdown-wrapper .deformFormFieldset
+{
+    width: 90%;
+    margin: 10px auto 10px;
+}
+
+#dropdown-wrapper .form-group
+{
+    display: inline-block;
+    margin: 5px;
+}
+
+#dropdown-wrapper #item-deformField1,
+#dropdown-wrapper #item-deformField2,
+#dropdown-wrapper #item-deformField3,
+#dropdown-wrapper #item-deformField4
+{
+    width: auto;
+    padding: 0px;
+}
+
+#forecast-image-Canada,
+#forecast-image-East,
+#forecast-image-West,
+#forecast-image-Development
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 96%;
+    width: 96%;
+    border: 1px solid #999999;
+
+}
+
+#PM25-legend
+{
+    display: block;
+    margin: auto auto 0;
+    margin-right: auto;
+    width: 90%;
+    height: 45px;
+}
+
+.block {
+    width: 95%;
+    margin: 10px;
+}
+
+.block h2 {
+    font-weight: bold;
+    text-align: center;
+}
+
+#footer-links p,
+#copyright {
+    text-align: center;
+}
+
+#forecast-controls {
+    width: 235px;
+    margin: 1.5em auto 1.5em;
+}
+
+#forecast-controls button {
+    border: 1px solid #1d1d1d;
+    background:#FFF;
+    background: -moz-linear-gradient(top,#FFF 0%,#CCC 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#FFF),color-stop(100%,#CCC));
+    background: -webkit-linear-gradient(top,#FFF 0%,#CCC 100%);
+    background: -o-linear-gradient(top,#FFF 0%,#CCC 100%);
+    background: -ms-linear-gradient(top,#FFF 0%,#CCC 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#FFF',endColorstr='#FFF',GradientType=0);
+    width: 30px;
+    height: 30px;
+    padding:2px 4px;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    border:1px solid #AAA
+}
+
+#slideshow-options
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .header-wrapper,
+    .body-wrapper,
+    .footer-wrapper {
+        width: 768px;
+    }
+
+    .header {
+        width: 768px;
+        border-bottom: 12px solid #FC6900;
+    }
+
+    p.sb-toggle-left {
+        display: none;
+    }
+
+    h1.logo a {
+        position: absolute; top: 15px; left: 125px;
+        padding: 10px;
+        font-size: 2em;
+        top: 20px; left: 25px;
+    } 
+
+    nav {
+        display: block;
+        width: auto;
+        height: auto;
+        position: absolute; top: 3px; left: 275px;
+        /*height:50px;*/
+    }
+
+    nav ul
+    {
+        list-style: none;
+    }
+        
+        nav ul li {
+            display: inline-block;
+            padding: 15px 0 10px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 1.3em;
+        }
+        
+            nav ul li a {
+                display: block;
+                padding: 0 15px 0;
+                color: #c0c0c0;
+            }
+
+            h1.logo a:hover,
+            h1.logo a:focus,
+            nav a:hover {
+                color: #fff;
+            }
+
+        nav ul ul {
+            display: none; /*<===== check this yo*/
+            background: #232323;
+            padding: 0;
+            position: absolute; top: 100%;
+            z-index: 1;
+        }
+            
+            nav ul li:hover > ul {
+                display: block;
+            }
+
+            #nav ul:after {
+                content: ""; clear: both; display: block;
+            }
+
+            nav ul ul li {
+                float: none;
+                margin: 0;
+                padding: 0;
+                border-top: 1px solid #6b727c;
+                font-size: 0.85em;
+                display: block;
+                text-align: center;
+                height: 50px;
+                width: 175px;
+                line-height: 50px;
+            }
+            nav ul ul li:first-child {
+                border-top:none;
+            }
+
+                nav ul ul li a {
+                    display: inline-block;
+                    color: #c0c0c0;
+                }   
+                    nav ul ul li a:hover {
+                        color: #eee
+                    }
+                    
+    #banner-image img{
+        position: relative;
+        display: block;
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Forecast date dropdown menu */
+    #dropdown-wrapper .deformFormFieldset
+    {
+        width: 635px;
+    }
+
+    #forecast-image-Canada,
+    #forecast-image-East,
+    #forecast-image-West,
+    #forecast-image-Development
+    {
+        height: 600px;
+        width: 600px;
+    }
+
+    #PM25-legend
+    {
+        width: 550px;
+        height: 45px;
+    }
+    
+}
+
+@media only screen and (min-width: 960px) {
+    .header-wrapper,
+    .body-wrapper,
+    .footer-wrapper {
+        width: 960px;
+    }
+
+    .header {
+        width: 960px;
+    }
+    
+    nav {
+        top: 3px; left: 300px;
+    }
+    
+    #banner-image img {
+        width: 960px;
+    }
+
+    /* Forecast date dropdown menu */
+    #dropdown-wrapper .deformFormFieldset
+    {
+        
+    }
+
+    #forecast-image-Canada,
+    #forecast-image-East,
+    #forecast-image-West,
+    #forecast-image-Development
+    {
+        height: 800px;
+        width: 800px;
+    }
+
+    #PM25-legend
+    {
+        width: 641px;
+        height: 55px;
+    }
+
+    .block {
+        width: 30%;
+        float: left;
+    }
+}

@@ -13,11 +13,15 @@ from datetime import datetime, date
 import forecastdt
 import tarfile
 import os
+import sys
+import inspect
 
 import colander
 import deform
 from pyramid.httpexceptions import HTTPFound
 from datetime import datetime, tzinfo, timedelta
+
+PY3 = sys.version_info[0] == 3
 
 def find_current_date():
     """Returns current time in UTC in format of YYYYMMDDHH"""
@@ -45,6 +49,7 @@ class ContactForm(colander.MappingSchema):
                 validator=colander.Length(max=100),
                 widget=deform.widget.TextAreaWidget(rows=10, cols=40),
                 )
+
 
 
 # class PST(tzinfo):
@@ -80,8 +85,8 @@ def view_home(request):
 # 
 @view_config(route_name='forecasts', renderer='templates/forecasts.jinja2')
 def view_forecast(request):
-    region  = request.matchdict['region'].capitalize()
-    current_timezone = request.matchdict['timezone'] # date info
+    region = request.matchdict['region'].capitalize()
+    # current_timezone = request.matchdict['timezone'] # date info
     dateYMD = request.matchdict['YYYYMMDDHH']        # date info
 
     opts_year     = forecastdt.find_opts_year()
@@ -110,12 +115,12 @@ def view_forecast(request):
             colander.String(),
             widget=deform.widget.SelectWidget(values=opts_hour)
             )
-        timeZone = colander.SchemaNode(
-            colander.String(),
-            default=current_timezone,
-            widget=deform.widget.SelectWidget(values=opts_timezone)
-            )
-    
+        # timeZone = colander.SchemaNode(
+        #     colander.String(),
+        #     default=current_timezone,
+        #     widget=deform.widget.SelectWidget(values=opts_timezone)
+        #     )
+
     schema = Schema()
     forecast_form = deform.Form(schema, buttons=('submit',))
     
@@ -124,7 +129,7 @@ def view_forecast(request):
         month =  forecastdt.month_str2num( request.params.get('month') )
         day = request.params.get('day')
         hour = request.params.get('hour')
-        timezone = request.params.get('timeZone')
+        # timezone = request.params.get('timeZone')
 
         return HTTPFound(location=request.route_url('forecasts', region=region, timezone=timezone, YYYYMMDDHH=year+month+day+hour))
     else:
@@ -180,7 +185,7 @@ def view_forecast(request):
 
         #write to .json file to allow javascript to read variables <- lower priority
 
-        return {'region': region, 'forecast_date': dateYMD, 'error': False, 'image_set': files, "form": forecast_form}
+        return {'region': region, 'forecast_date': dateYMD, 'error': False, 'image_set': files, "form": forecast_form }
 
 #
 # Data
