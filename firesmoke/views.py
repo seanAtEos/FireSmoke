@@ -181,11 +181,11 @@ def view_forecast(request):
                 files.append(f)
         if len(files) == 0:
             return {'error': 'unable to find forecast images, please try again', 'form': 'forecast_form'}
-        files = ['/cache/' + file_base + '/' + s for s in files]
+        files = ['cache/' + file_base + '/' + s for s in files]
 
         #write to .json file to allow javascript to read variables <- lower priority
 
-        return {'region': region, 'forecast_date': dateYMD, 'error': False, 'image_set': files, "form": forecast_form }
+        return {'region': region, 'forecast_date': dateYMD, 'error': False, 'prefix': 'firesmoke:', 'image_set': files[0:8], "form": forecast_form }
 
 #
 # Data

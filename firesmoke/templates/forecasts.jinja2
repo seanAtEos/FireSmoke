@@ -5,122 +5,50 @@
 {% block content %}
 
 <div id="main-wrapper">
-		<h3 id="forecast-title">Forecast for {%if region == 'Canada' %}Canada{% elif region == 'East'%}Eastern{% elif region == 'West'%}West{% elif region == 'Development' %}Developmental{% endif %} on {{ forecast_date }}</h3>
+		<h3 id="forecast-title">Forecast for {%if region == 'Canada' %}Canada{% elif region == 'East'%}Eastern{% elif region == 'West'%}West{% elif region == 'Development' %}Developmental{% endif %} on <span id="month"></span> </h3>
 		{% if error %}<p>{{ error }}</p>{% endif %}
 		<div id="dropdown-wrapper">
 			{{ form.render() | safe() }}
 		</div>
+
 		<div id="timeZoneDropDown"></div>
-		
-		<script type="text/javascript">
-			OpsImgs =[
-			{#{%- if tarsuccess -%}#}
-			{% if not error %}
-				{% for image in image_set %}
-				'{{ image }}',
-				{%- endfor %}
-			{%- endif -%}
-			];
-		
-				
-			  var ImgNum = 0;
-				var ImgLen = OpsImgs.length - 1;
-				var datespec;
-				var delay = 300; // Delay between images (msec)
-				var lock = false;
-				var run;
-				
-				function chgImg(direction) {
-					
-					if (document.images) {
-						ImgNum = ImgNum + direction;
-						if (ImgNum > ImgLen) {
-							ImgNum = 0;
-						}
-						if (ImgNum < 0) {
-							ImgNum = ImgLen;
-						}
-						document.getElementById('forecast-image-{{region}}').src = OpsImgs[ImgNum];
-						datespec = OpsImgs[ImgNum].substr(-14,10);
-						//document.getElementById('imgtag').innerHTML = datespec;
-					}
-				}
-			
-				function auto() {
-					if (lock == true) {
-						lock = false;
-						document.getElementById('toggle').src = "{{request.static_url('firesmoke:static/images/controls/play_animation.png')}}";
-						window.clearInterval(run);
-					}
-					else if (lock == false) {
-						lock = true;
-						document.getElementById('toggle').src = "{{request.static_url('firesmoke:static/images/controls/pause.png')}}";
-						run = setInterval("chgImg(1)", delay);
-						changeSpd(0);
-					}
-				}
-				
-				function firstImg() {
-						ImgNum = 0;
-						document.getElementById('forecast-image-{{region}}').src = OpsImgs[ImgNum];
-						datespec = OpsImgs[ImgNum].substr(-14,10);
-						document.getElementById('imgtag').innerHTML = datespec;
-				}
-		
-				function lastImg() {
-						ImgNum = OpsImgs.length - 1;
-						document.getElementById('forecast-image-{{region}}').src = OpsImgs[ImgNum];
-						datespec = OpsImgs[ImgNum].substr(-14,10);
-						document.getElementById('imgtag').innerHTML = datespec;
-				}
-				
-				function changeSpd(dv) {
-					delay = delay + dv;
-					if (delay <= 50 ) {
-						delay=50;
-					}
-					else if (delay>=950) {
-						delay=950;
-					}
-					document.getElementById('show-speed').innerHTML = delay;
-					window.clearInterval(run)
-					run = setInterval("chgImg(1)", delay);
-				}
-				
-		</script>
-		
-		{#{% if error is not defined %}#}
+
 		{% if not error %}
-		<img id="forecast-image-{{region}}" src={{request.static_url('firesmoke:cache/images-canada-20140420-18/dispersion-2014042018.jpg')}} /><br />
-        <img id="PM25-legend" src={{request.static_url('firesmoke:static/images/PM25-legend.gif')}} />
-				
+		
+		<!-- Use Jinja2 loop to list all images, then use javascript (if enabled) to remove list and -->
+		<div id="forecast-imgs">
+		{%- for image in image_set %}
+			<img class="forecast-image" src="{{request.static_url(prefix + image)}}">
+		{%- endfor %}
+		</div>
+		
+    <p id="imgtag">test</p>
+		<img id="PM25-legend" src={{request.static_url('firesmoke:static/images/PM25-legend.gif')}} />
+		
 		<div id="forecast-controls">
 			<button type="button" onclick="changeSpd(50)"><img src="{{request.static_url('firesmoke:static/images/controls/slower1.png')}}"></button>
 			<button type="button" onclick="firstImg()"><img src="{{request.static_url('firesmoke:static/images/controls/first_frame.png')}}"></button>
 			<button type="button" onclick="chgImg(-1)"><img src="{{request.static_url('firesmoke:static/images/controls/previous_frame.png')}}"></button>
-			<!--<button type="button"><img src="{{request.static_url('firesmoke:static/images/controls/reverse_animation.png')}}"></button>-->
-			<!--<button type="button"><img src="{{request.static_url('firesmoke:static/images/controls/pause.png')}}"></button>-->
 			<button type="button" onclick="auto()"><img id="toggle" src="{{request.static_url('firesmoke:static/images/controls/play_animation.png')}}"></button>
 			<button type="button" onclick="chgImg(1)"><img src="{{request.static_url('firesmoke:static/images/controls/next_frame.png')}}"></button>
 			<button type="button" onclock="lastImg()"><img src="{{request.static_url('firesmoke:static/images/controls/last_frame.png')}}"></button>
 			<button type="button" onclick="changeSpd(-50)"><img src="{{request.static_url('firesmoke:static/images/controls/faster.png')}}"></button>
 		</div>
-		<p id="show-speed">300</p>
+		<!--<p id="show-speed">300</p>-->
 		
-		<!--
-		<div id="slideshow-options">
-			<td>&nbsp;</td>
-			<th><p>Current image:
-			<span id="imgtag">2013070600</span><br />
-				(YYYYMMDDHH)</p>
-				<a href="javascript:chgImg(-1)">< Prev</a> &nbsp; | &nbsp;
-				<a id="toggle" href="javascript:auto()">Auto</a> &nbsp; | &nbsp;
-				<a href="javascript:chgImg(1)">Next ></a>
-			</th>
-		</div>
-		-->
+		<!-- Initialize everything needed for image looping-->
+		<script type="text/javascript">
+			OpsImgs = [ '{{ image_set|join("','")|safe }}'];
+			var ImgNum = 0;
+			var ImgLen = OpsImgs.length - 1;
+			var datespec;
+			var delay = 300; // Delay between images (msec)
+			var lock = false;
+			var run;
+			var forecastDate = {{forecast_date}};
+		</script>
 		
 		{% endif %}
 </div>
-		
+
 {% endblock %}

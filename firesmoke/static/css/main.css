@@ -241,10 +241,10 @@ nav li ul {
     padding: 0px;
 }
 
-#forecast-image-Canada,
-#forecast-image-East,
-#forecast-image-West,
-#forecast-image-Development
+.forecast-image,
+.forecast-image,
+.forecast-image,
+.forecast-image
 {
     display: block;
     margin-left: auto;
@@ -280,7 +280,8 @@ nav li ul {
 }
 
 #forecast-controls {
-    width: 235px;
+    display: none;
+    width: 315px;
     margin: 1.5em auto 1.5em;
 }
 
@@ -293,8 +294,8 @@ nav li ul {
     background: -o-linear-gradient(top,#FFF 0%,#CCC 100%);
     background: -ms-linear-gradient(top,#FFF 0%,#CCC 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#FFF',endColorstr='#FFF',GradientType=0);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     padding:2px 4px;
     border-radius:4px;
     -moz-border-radius:4px;
@@ -420,10 +421,10 @@ nav li ul {
         width: 635px;
     }
 
-    #forecast-image-Canada,
-    #forecast-image-East,
-    #forecast-image-West,
-    #forecast-image-Development
+    .forecast-image,
+    .forecast-image,
+    .forecast-image,
+    .forecast-image
     {
         height: 600px;
         width: 600px;
@@ -462,10 +463,10 @@ nav li ul {
         
     }
 
-    #forecast-image-Canada,
-    #forecast-image-East,
-    #forecast-image-West,
-    #forecast-image-Development
+    .forecast-image,
+    .forecast-image,
+    .forecast-image,
+    .forecast-image
     {
         height: 800px;
         width: 800px;

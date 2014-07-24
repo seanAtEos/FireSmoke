@@ -42,3 +42,5 @@ SUB_MENUS = {
 ext = '.tgz'
 read_dir_abs  = '/Users/shayes/Documents/BScache/BSC-archives/dispersion/' #+ region + '/'
 write_dir_abs = '/Users/shayes/Projects/BlueSky/FireSmoke/firesmoke/cache/' # + file_base
+
+STATIC_IMG_PREFIX = 'firesmoke:'
