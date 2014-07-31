@@ -185,7 +185,7 @@ def view_forecast(request):
 
         #write to .json file to allow javascript to read variables <- lower priority
 
-        return {'region': region, 'forecast_date': dateYMD, 'error': False, 'prefix': 'firesmoke:', 'image_set': files[0:8], "form": forecast_form }
+        return {'region': region, 'forecast_date': dateYMD, 'error': False, 'prefix': 'firesmoke:', 'image_set': files[0:10], "form": forecast_form }
 
 #
 # Data

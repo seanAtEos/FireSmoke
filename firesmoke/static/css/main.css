@@ -279,6 +279,10 @@ nav li ul {
     text-align: center;
 }
 
+#forecast-slider {
+    width: 300px;
+}
+
 #forecast-controls {
     display: none;
     width: 315px;
@@ -301,6 +305,13 @@ nav li ul {
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
     border:1px solid #AAA
+}
+
+#forecast-radios
+{
+    width: 205px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #slideshow-options

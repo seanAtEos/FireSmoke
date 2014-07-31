@@ -175,4 +175,3 @@
         datespec = OpsImgs[ImgNum].substr(-14,10);
         document.getElementById('imgtag').innerHTML = datespec;
     }
-

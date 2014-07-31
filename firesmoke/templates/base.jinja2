@@ -15,7 +15,6 @@
 		<link rel="stylesheet" href="{{request.static_url('firesmoke:static/css/slidebars.min.css')}}">
 		
 		<script src="{{request.static_url('firesmoke:static/js/jquery.min.js')}}"></script>
-		
 		<script src="{{request.static_url('firesmoke:static/js/slidebars.min.js')}}"></script>
 		
 		<!--
@@ -66,7 +65,7 @@
 			});
 		</script>
 			-->
-
+		{% block script %}{% endblock %}
 		<script src="{{request.static_url('firesmoke:static/js/main.js')}}"></script>
 		
 	</body>
