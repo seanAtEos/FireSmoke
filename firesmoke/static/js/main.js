@@ -1,47 +1,81 @@
-// declare global variables here
-var timeZoneList = new Array();
 
-// 
-// Functions that run on startup
-// 
-
-// Load SlideBars - the javascript and css responsible for mobile navigation
+// Load SlideBars and intialize view based on display width
 (function($) {
-  $(document).ready(function() {
-    $.slidebars();
-  });
+    $(document).ready(function() {
+        $.slidebars();
+        $("#sb-forecasts").click(function(){
+            $(".sub-li").toggleClass('displayed');
+        });
+    });
+    
+    if ( $(window).width() < 768 ) {
+        $('.sb-toggle-left').css({"display":"block"});
+        $('nav').css({"display": "none"});
+    }
+    else {
+        $('.sb-toggle-left').css({"display": "none"});
+        $('nav').css({"display": "block"});
+    }
+
+    setDay();
 }) (jQuery);
 
-// set element with id #sb-forecasts as the button that toggles the left SlideBar
-$(function() { 
-	$("#sb-forecasts").click(function(){
-		$(".sub-li").toggleClass('displayed');
-	});
-});
+// Register all events
+(function($) {
+    // Register events to handle the forecast gallery controls
+    $('#radio-once').click( function(){
+        window.clearInterval(forecast.run);
+        if ( forecast.ImgNum >= forecast.OpsImgs.length-1) { 
+            forecast.ImgNum = 0;
+            document.getElementById('forecast-slider').value = forecast.ImgNum;
+        }
+        forecast.fwd = true;
+        forecast.run = setTimeout(loopOnceFwd, forecast.delay);
+    });
+    $('#radio-loop').click( function(){
+        window.clearInterval(forecast.run);
+        forecast.fwd = true;
+        forecast.run = setTimeout(loopContinuous, forecast.delay);
+    });
+    $('#radio-reflect').click( function(){
+        window.clearInterval(forecast.run);
+        forecast.run = setTimeout(loopReflect, forecast.delay);
+    });
 
-// Initizes the webpage for javascript enabled users (progressive enhancement)
-$(function() {
-	if ( $(window).width() < 768 ) {
-		$('.sb-toggle-left').css({"display":"block"});
-		$('nav').css({"display": "none"});
-	}
-	else {
-		$('.sb-toggle-left').css({"display": "none"});
-		$('nav').css({"display": "block"});
-	}
-});
+    $('#deformField1').change( function(){
+        setDay();
+    });
+    $('#deformField2').change( function(){
+        setDay();
+    });
 
-// Changes list of images to single frame slideshow
-$(window).load( function() {
-    document.getElementById('forecast-controls').style.display = 'block';
-    forecastImages = document.getElementById('forecast-imgs');
-    imgs = forecastImages.children;
-    for (i = imgs.length-1; i>0; i--) {
-        imgs[i].parentNode.removeChild(imgs[i]);
+}) (jQuery);
+
+// modifies the time to be human readable
+function time2str(hours, minutes) {
+    var mins;
+    if (minutes < 10) {
+        mins = '0' + minutes;
     }
-    initializeRangeSlider();
-    dst(forecastDate);
-    
+    else {
+        mins = String(minutes);
+    }
+    return String(hours) + ':' + mins;
+}
+
+// if forecast page initialize the slideshow
+$(window).load( function() {
+    if (forecast) {
+        document.getElementById('forecast-controls').style.display = 'block';
+        forecastImages = document.getElementById('forecast-imgs');
+        imgs = forecastImages.children;
+        for (i = imgs.length-1; i>0; i--) {
+            imgs[i].parentNode.removeChild(imgs[i]);
+        }
+        forecast.ImgLen = forecast.OpsImgs.length-1;
+        initializeRangeSlider();
+        dst();
+    }
 });
 
 // When window is resized adjust the webpage's responsive layout accordingly
@@ -58,9 +92,11 @@ $(window).on('resize', function() {
 
 // Initialize Slider to show which forecast img is being displayed
 function initializeRangeSlider() {
-    var len = OpsImgs.length-1
+    console.log('intializeRangeSlider()');
+    var len = forecast.OpsImgs.length-1;
     var rs = document.createElement('Input');
-    attrs = {"type":"range", "id":"forecast-slider", "onchange":"jump2img(this.value)", "min":0,"max":len, "step":0, "title": String(ImgNum) + '/' + String(len)}
+    attrs = {"type":"range", "id":"forecast-slider", "onchange":"jump2img(this.value)", "min":0,"max":len, "step":0, "title": String(forecast.ImgNum) + '/' + String(len)}
+    
     for (var key in attrs) {
         rs.setAttribute(key, attrs[key]);
     }
@@ -68,15 +104,14 @@ function initializeRangeSlider() {
     fc.insertBefore(rs, fc.firstChild);
 }
 
-// Initializes the timezone drop down menu based on timeZoneList's entries
+// Initializes the timezone drop down menu based on forecast.timeZoneList's entries
 function initializeDropDown() {
     var dropDownHTML = new String();
     dropDownHTML += '<select id="timeZoneSelect" onchange="changeDateTime()"><option value="">Change Time Zone</option>';
 
-    for (i in timeZoneList) {
-        dropDownHTML += '<option value="' + i + '">' + timeZoneList[i][1] + '</option>';
+    for (i in forecast.timeZoneList) {
+        dropDownHTML += '<option value="' + i + '">' + forecast.timeZoneList[i][1] + '</option>';
     }
-    
     dropDownHTML += '</select>';
     document.getElementById("timeZoneDropDown").innerHTML = dropDownHTML;
 }
@@ -107,7 +142,7 @@ function initializeTimeZone() {
 }
 
 // Determines if daylight savings time is currently in effect for user in users present state
-function dst( currentDate ) {
+function dst() {
     var dston;
     var dstoff;
     var currentDate = new Date();
@@ -118,7 +153,7 @@ function dst( currentDate ) {
     dstoff = d - d.getDay();
 
     if (currentDate >= dston && currentDate < dstoff) {
-        timeZoneList = {
+        forecast.timeZoneList = {
             "UTC": [0, "UTC: Coordinated Univeral Time"],
             "PDT": [-7,"PDT: Pacific Daylight Time"],
             "MDT": [-6,"MDT: Mountain Daylight Time"],
@@ -129,7 +164,7 @@ function dst( currentDate ) {
         }
     }
     else {
-        timeZoneList = {
+        forecast.timeZoneList = {
             "UTC": [0, "UTC: Coordinated Univeral Time"],
             "PST": [-8, "PST: Pacific Standard Time"],
             "MST": [-7, "MST: Mountain Standard Time"],
@@ -139,40 +174,37 @@ function dst( currentDate ) {
             "NST": [-3.5, "NST: Newfoundland Standard Time"]
         }
     }
-
     initializeDropDown();
     initializeTimeZone();
     chgImg(0);
 }
 
 function jump2img(val) {
-    ImgNum = parseInt(val);
-    document.querySelector('#forecast-imgs img').src = '../../' + OpsImgs[ImgNum];
-    datespec = OpsImgs[ImgNum].substr(-14,10);
+    forecast.ImgNum = parseInt(val);
+    document.querySelector('#forecast-imgs img').src = '../../' + forecast.OpsImgs[forecast.ImgNum];
+    forecast.datespec = forecast.OpsImgs[forecast.ImgNum].substr(-14,10);
     changeDateTime();
 }
 
 // change image -1,0,+1 steps through the array of images
 function chgImg(direction) {
-    var ImgLen = OpsImgs.length-1;
     if (document.images) {
-        ImgNum = ImgNum + direction;
-        
-        if (ImgNum > ImgLen) {
-            ImgNum = 0;
-        }
-        if (ImgNum < 0) {
-            ImgNum = ImgLen;
-        }
+        forecast.ImgNum = forecast.ImgNum + direction;
 
-        document.querySelector('#forecast-imgs img').src = '../../' + OpsImgs[ImgNum];
-        datespec = OpsImgs[ImgNum].substr(-14,10);
-        document.getElementById('forecast-slider').value = ImgNum;
+        if (forecast.ImgNum > forecast.ImgLen) {
+            forecast.ImgNum = 0;
+        }
+        if (forecast.ImgNum < 0) {
+            forecast.ImgNum = forecast.ImgLen;
+        }
+        document.querySelector('#forecast-imgs img').src = '../../' + forecast.OpsImgs[forecast.ImgNum];
+        forecast.datespec = forecast.OpsImgs[forecast.ImgNum].substr(-14,10);
+        document.getElementById('forecast-slider').value = forecast.ImgNum;
         changeDateTime();
     }
 }
 
-// takes datespec and changes text on webpage to represent the date and time of the displayed image
+// takes forecast.datespec and changes text on webpage to represent the date and time of the displayed image
 function changeDateTime() {
     var imgDateTime = datespec2txt();
     var year  = imgDateTime[0];
@@ -189,13 +221,13 @@ function changeDateTime() {
     document.getElementById('imageTime').innerHTML = time;
 }
 
-// converts the datespec to an array of strings representing the date: [year, month, day, date, time ]
+// converts the forecast.datespec to an array of strings representing the date: [year, month, day, date, time ]
 function datespec2txt() {
     var d;
-    var year    = datespec.substr(0,4);
-    var month   = datespec.substr(4,2);
-    var day     = datespec.substr(6,2);
-    var hours   = datespec.substr(8,2);
+    var year    = forecast.datespec.substr(0,4);
+    var month   = forecast.datespec.substr(4,2);
+    var day     = forecast.datespec.substr(6,2);
+    var hours   = forecast.datespec.substr(8,2);
     var minutes = 0;
     var tz      = getTimeZone();
 
@@ -211,13 +243,13 @@ function getTimeZone() {
     var ddmenu = document.getElementById('timeZoneSelect');
     var timeZoneTxt = ddmenu.options[ddmenu.selectedIndex].text;
 
-    for ( var i in timeZoneList) {
-        if ( timeZoneTxt === timeZoneList[i][1] ) {
-            if (Math.abs(timeZoneList[i][0]) % 1 !== 0 ) {
-                tz = [i, Math.ceil( timeZoneList[i][0] ), -30]; // UTC-2.5 hrs instead of -3, and UTC-3.5hrs instead of -4
+    for ( var i in forecast.timeZoneList) {
+        if ( timeZoneTxt === forecast.timeZoneList[i][1] ) {
+            if (Math.abs(forecast.timeZoneList[i][0]) % 1 !== 0 ) {
+                tz = [i, Math.ceil( forecast.timeZoneList[i][0] ), -30]; // UTC-2.5 hrs instead of -3, and UTC-3.5hrs instead of -4
             }
             else {
-                tz = [i, timeZoneList[i][0], 0];
+                tz = [i, forecast.timeZoneList[i][0], 0];
             }
             localStorage.setItem('timeZone', i);
             break;
@@ -229,133 +261,118 @@ function getTimeZone() {
     return tz;
 }
 
-
-
-function loopOnceFwd() {
-    // console.log('hi');
-    var ImgLen = OpsImgs.length-1;
+function loopContinuous() {
     if (document.images) {
-        // console.log('ImgNum === ImgLen: ' + ImgNum === ImgLen);
-        if (ImgNum >= ImgLen) {
-            clearLoopInterval();
+        if (forecast.ImgNum >= forecast.ImgLen) {
+            document.getElementById('forecast-slider').value = forecast.ImgNum;
         }
-        else {
-            chgImg(1);
-        }
-    }
-}
-
-function loopOnceRev() {
-    var ImgLen = OpsImgs.length-1;
-    if (document.images) {
-        if (ImgNum <= 0 ) {
-            clearLoopInterval();
-        }
-        else {
-            chgImg(-1);
-        }
-    }
-}
-
-function loopReflect(fwd) {
-    var ImgLen = OpsImgs.length-1;
-    if (document.images) {
-        if (fwd === true && ImgNum >= ImgLen) {
-            fwd = false;
-            console.log('retreat!');
-        }
-        else if (fwd === false && ImgNum <= 0 ) {
-            fwd = true;
-            console.log('oneward ho!');
-        }
-        run = setTimeout(loopReflect, delay, fwd);
-
-        if (fwd === true) {
-            // start looping fwd through images
-            loopOnceFwd();
-        }
-        else if (fwd === false) {
-            // start looping rev through images
-            loopOnceRev();
-        }
+        chgImg(1);
+        forecast.run = setTimeout(loopContinuous, forecast.delay);
     }
 }
 
 function clearLoopInterval() {
-    if (lock === true) {
-        lock = false;
+    if (forecast.lock === true) {
+        forecast.lock = false;
         document.getElementById('toggle').src = "../../static/images/controls/play_animation.png";
-        window.clearInterval(run);
+        window.clearInterval(forecast.run);
+    }
+}
+
+function loopReflect(fwd) {
+    if (document.images) {
+        if (forecast.fwd === true && forecast.ImgNum >= forecast.ImgLen) {
+            forecast.fwd = false;
+            console.log('retreat!')
+        }
+        else if (forecast.fwd === false && forecast.ImgNum <= 0 ) {
+            forecast.fwd = true;
+            console.log('onward ho!');
+        }
+        if (forecast.fwd === true) {
+            chgImg(1);
+        }
+        else if (forecast.fwd === false) {
+            chgImg(-1)
+        }
+        forecast.run = setTimeout(loopReflect, forecast.delay);
+    }
+}
+
+function loopOnceFwd() {
+    if (document.images) {
+        if (forecast.ImgNum >= forecast.ImgLen) {
+            console.log('end of run');
+            clearLoopInterval();
+        }
+        else {
+            console.log('about to call chgImg(1), forecast.delay: ' + forecast.delay);
+            chgImg(1);
+            forecast.run = setTimeout(loopOnceFwd, forecast.delay)
+        }
     }
 }
 
 // Loop forward through the images continuously
 function auto() {
-    if (lock == true) {
-        lock = false;
+    if (forecast.lock == true) {
+        forecast.lock = false;
         document.getElementById('toggle').src = "../../static/images/controls/play_animation.png";
-        window.clearInterval(run);
+        // clear forecast.run
+        window.clearInterval(forecast.run);
     }
-    else if (lock == false) {
-        lock = true;
+    else if (forecast.lock == false) {
+        forecast.lock = true;
         document.getElementById('toggle').src = "../../static/images/controls/pause.png";
+        // set forecast.run
         if ( document.getElementById('radio-once').checked ) {
-            run = window.setInterval(loopOnceFwd, delay, true);
+            if ( forecast.ImgNum >= forecast.OpsImgs.length-1) { 
+                forecast.ImgNum = 0;
+                document.getElementById('forecast-slider').value = forecast.ImgNum;
+            }
+            forecast.fwd = true;
+            forecast.run = setTimeout(loopOnceFwd, forecast.delay);
         }
         if ( document.getElementById('radio-loop').checked ) {
-            run = window.setInterval('chgImg(1)', delay);
+            forecast.fwd = true;
+            forecast.run = setTimeout(loopContinuous, forecast.delay);
         }
         if ( document.getElementById('radio-reflect').checked ) {
-            run = window.setTimeout(loopReflect, delay, true);
+            forecast.run = setTimeout(loopReflect, forecast.delay);
         }
         // changeSpd(0);
     }
 }
 
-// // Loop forward through the images continuously
-// function auto() {
-//     if (lock == true) {
-//         lock = false;
-//         document.getElementById('toggle').src = "../../static/images/controls/play_animation.png";
-//         window.clearInterval(run);
-//     }
-//     else if (lock == false) {
-//         lock = true;
-//         document.getElementById('toggle').src = "../../static/images/controls/pause.png";
-//         run = setInterval("chgImg(1)", delay);
-//         changeSpd(0);
-//     }
-// }
-
 // Go to first image
 function firstImg() {
-    ImgNum = 0;
-    document.querySelector('#forecast-imgs img').src = '../../' + OpsImgs[ImgNum];
-    datespec = OpsImgs[ImgNum].substr(-14,10);
-    changeDateTime(datespec);
+    forecast.ImgNum = 0;
+    document.querySelector('#forecast-imgs img').src = '../../' + forecast.OpsImgs[forecast.ImgNum];
+    forecast.datespec = forecast.OpsImgs[forecast.ImgNum].substr(-14,10);
+    changeDateTime(forecast.datespec);
 }
 
 // Go to last image
 function lastImg() {
     console.log('entered');
-    ImgNum = OpsImgs.length - 1;
-    document.querySelector('#forecast-imgs img').src = '../../' + OpsImgs[ImgNum];
-    datespec = OpsImgs[ImgNum].substr(-14,10);
-    changeDateTime(datespec);
+    forecast.ImgNum = forecast.OpsImgs.length - 1;
+    document.querySelector('#forecast-imgs img').src = '../../' + forecast.OpsImgs[forecast.ImgNum];
+    forecast.datespec = forecast.OpsImgs[forecast.ImgNum].substr(-14,10);
+    changeDateTime(forecast.datespec);
 }
 
 // change the speed of the image looping
 function changeSpd(dv) {
-    delay = delay + dv;
-    if (delay <= 50 ) {
-        delay=50;
+    forecast.delay = forecast.delay + dv;
+    if (forecast.delay <= 50 ) {
+        forecast.delay=50;
     }
-    else if (delay>=950) {
-        delay=950;
+    else if (forecast.delay>=950) {
+        forecast.delay=950;
     }
-    // document.getElementById('show-speed').innerHTML = delay;
-    window.clearInterval(run)
-    run = setInterval("chgImg(1)", delay);
+    document.getElementById('displaySpeed').innerHTML = forecast.delay;
+    // window.clearInterval(forecast.run)
+    // forecast.run = setInterval("chgImg(1)", forecast.delay);
 }
 
 // modifies the month to be human readable
@@ -373,6 +390,25 @@ function mon2str(month) {
         case 9: month = "October"; break;
         case 10: month = "November"; break;
         case 11: month = "December"; break;
+    }
+    return month;
+}
+
+function str2mon(month) {
+    console.log('in str2mon')
+        switch(month) {
+        case 'jan': month = 1; break;
+        case 'feb': month = 2; break;
+        case 'mar': month = 3; break;
+        case 'apr': month = 4; break;
+        case 'may': month = 5; break;
+        case 'jun': month = 6; break;
+        case 'jul': month = 7; break;
+        case 'aug': month = 8; break;
+        case 'sep': month = 9; break;
+        case 'oct': month = 10; break;
+        case 'nov': month = 11; break;
+        case 'dec': month = 12; break;
     }
     return month;
 }
@@ -407,40 +443,35 @@ function date2str(day) {
     return date;
 }
 
-// modifies the time to be human readable
-function time2str(hours, minutes) {
-    var mins;
-    if (minutes < 10) {
-        mins = '0' + minutes;
-    }
-    else {
-        mins = String(minutes);
-    }
-    return String(hours) + ':' + mins;
-}
-
 // Accounts for leap year in forecast dropdown menu - must test with new js code as I'm not sure if it works
 function daysInMonth(month, year) {
+    month = str2mon(month);
     var dd = new Date(year, month, 0);
     return dd.getDate();
 }
 
 function setDayDrop(dyear, dmonth, dday) {
+    var newOption;
     var year = dyear.options[dyear.selectedIndex].value;
     var month = dmonth.options[dmonth.selectedIndex].value;
     var day = dday.options[dday.selectedIndex].value;
-    if (day == ' ') {
-        var days = (year == ' ' || month == ' ') ? 31 : daysInMonth(month, year);
-        dday.options.length = 0;
-        dday.options[dday.options.length] = new Option(' ', ' ');
-        for (var i = 1; i <= days; i++)
-            dday.options[dday.options.length] = new Option(i, i);
+    var days = daysInMonth(month, year);
+    
+    while (dday.firstChild) {
+        dday.removeChild(dday.firstChild);
+    }
+
+    for (var i = 1; i <= days; i++) {
+        newOption = document.createElement('option');
+        newOption.value = i;
+        newOption.innerHTML = i;
+        dday.appendChild( newOption );
     }
 }
 
 function setDay() {
-    var year = document.getElementById('year');
-    var month = document.getElementById('month');
-    var day = document.getElementById('day');
+    var year = document.getElementById('deformField1');
+    var month = document.getElementById('deformField2');
+    var day = document.getElementById('deformField3');
     setDayDrop(year, month, day);
 }

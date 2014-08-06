@@ -36,14 +36,16 @@
 			<button type="button" onclick="chgImg(1)"><img src="{{request.static_url('firesmoke:static/images/controls/next_frame.png')}}"></button>
 			<button type="button" onclick="lastImg()"><img src="{{request.static_url('firesmoke:static/images/controls/last_frame.png')}}"></button>
 			<button type="button" onclick="changeSpd(-50)"><img src="{{request.static_url('firesmoke:static/images/controls/faster.png')}}"></button>
-			<div id="forecast-radios">
+			<!--<div id="forecast-radios">-->
+			<form name="forecastRadios">
 				Once: <input id="radio-once" type=radio name="gallery-loop" value="Once">
 				Loop: <input id="radio-loop" type=radio name="gallery-loop" value="Loop" checked>
 				Reflect: <input id="radio-reflect" type=radio name="gallery-loop" value="reflect">
-			</div>
+			</form>	
+			<!--</div>-->
 		</div>
 		
-		<p id='tester'></p>
+		<p id='displaySpeed'></p>
 		
 		<!-- Initialize everything needed for image looping-->
 		
@@ -54,12 +56,17 @@
 
 {% block script %}
 		<script type="text/javascript">
-			OpsImgs = [ '{{ image_set|join("','")|safe }}'];
-			var ImgNum = 0;
-			var datespec;
-			var delay =300; // Delay between images (msec)
-			var lock = false;
-			var run;
-			var forecastDate = {{forecast_date}};
+			// declare forecast namespace here
+			var forecast = {
+				'OpsImgs': [ '{{ image_set|join("','")|safe }}'],
+				'ImgLen': 0,
+				'ImgNum': 0,
+				'datespec': '',
+				'delay': 300,
+				'lock': false,
+				'run': '',
+				'timeZoneList': [],
+				'fwd': true
+			};
 		</script>
 {% endblock %}

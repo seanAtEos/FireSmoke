@@ -115,11 +115,6 @@ def view_forecast(request):
             colander.String(),
             widget=deform.widget.SelectWidget(values=opts_hour)
             )
-        # timeZone = colander.SchemaNode(
-        #     colander.String(),
-        #     default=current_timezone,
-        #     widget=deform.widget.SelectWidget(values=opts_timezone)
-        #     )
 
     schema = Schema()
     forecast_form = deform.Form(schema, buttons=('submit',))
